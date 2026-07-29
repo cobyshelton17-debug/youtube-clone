@@ -1,0 +1,222 @@
+.topnav {
+  position: fixed;
+  top: 0;
+  left: 63px;
+  right: 0;
+  height: 56px;
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 12px;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.topnav-left {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.topnav-logo {
+  font-size: 20px;
+}
+
+.topnav-brand {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--nav-text);
+  white-space: nowrap;
+}
+
+.topnav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.topnav-search {
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
+  border: 1px solid var(--nav-search-border);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.topnav-search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  background: transparent;
+  color: var(--nav-text);
+}
+
+.topnav-search-btn {
+  border: none;
+  background: var(--nav-search-btn-bg);
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  border-left: 1px solid var(--nav-search-border);
+  color: var(--nav-text);
+}
+
+.topnav-search-btn:hover {
+  background: var(--nav-hover);
+}
+
+.topnav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.topnav-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 50%;
+  color: var(--nav-text);
+}
+
+.topnav-icon-btn:hover {
+  background: var(--nav-hover);
+}
+
+.profile-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 240px;
+  background: var(--menu-bg);
+  border: 1px solid var(--menu-border);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  z-index: 200;
+  padding: 8px 0;
+}
+
+.profile-menu-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+}
+
+.profile-menu-avatar {
+  font-size: 36px;
+}
+
+.profile-menu-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--menu-text);
+}
+
+.profile-menu-username {
+  font-size: 14px;
+  color: var(--menu-subtext);
+}
+
+.profile-menu-divider {
+  height: 1px;
+  background: var(--menu-border);
+  margin: 4px 0;
+}
+
+.profile-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  background: none;
+  font-size: 14px;
+  color: var(--menu-text);
+  cursor: pointer;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.profile-menu-item:hover {
+  background: var(--menu-hover);
+}
+
+.profile-menu-icon {
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.notif-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 240px;
+  background: var(--menu-bg);
+  border: 1px solid var(--menu-border);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  z-index: 200;
+  padding: 8px 0;
+}
+
+.notif-menu-empty {
+  padding: 24px 16px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--menu-subtext);
+}
+
+.topnav-avatar-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  line-height: 0;
+}
+
+.topnav-avatar-btn:hover {
+  background: var(--nav-hover);
+}
+
+.topnav-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.topnav-signin-btn {
+  background: none;
+  border: 1px solid #065fd4;
+  color: #065fd4;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.topnav-signin-btn:hover {
+  background: #e8f0fe;
+}
+
+.profile-menu-avatar-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

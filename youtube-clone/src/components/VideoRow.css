@@ -1,0 +1,28 @@
+.video-row {
+  margin-bottom: 32px;
+}
+
+.video-row-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--card-title);
+  margin: 0 0 12px 0;
+  padding-left: 4px;
+}
+
+.video-row-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.video-row-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.video-row-track {
+  display: flex;
+  gap: 16px;
+  padding: 4px 4px 8px;
+  width: max-content;
+}
