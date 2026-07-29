@@ -8,6 +8,7 @@ function Nav({ searchQuery, onSearch }) {
   const [notifOpen, setNotifOpen] = useState(false)
   const [darkTheme, setDarkTheme] = useState(false)
   const [inputValue, setInputValue] = useState(searchQuery || '')
+  const [mobileSearchOpen, setMobileSearchOpen] = useState(false)
   const inputRef = useRef(null)
   const menuRef = useRef(null)
   const btnRef = useRef(null)
@@ -56,6 +57,7 @@ function Nav({ searchQuery, onSearch }) {
     if (trimmed) {
       inputRef.current?.blur()
       onSearch(trimmed)
+      setMobileSearchOpen(false)
     }
   }
 
@@ -65,30 +67,41 @@ function Nav({ searchQuery, onSearch }) {
     }
   }
 
+  function openMobileSearch() {
+    setMobileSearchOpen(true)
+    setTimeout(() => inputRef.current?.focus(), 100)
+  }
+
   return (
-    <header className="topnav">
+    <header className={`topnav ${mobileSearchOpen ? 'topnav--searching' : ''}`}>
       <div className="topnav-left">
         <span className="topnav-logo">▶</span>
         <span className="topnav-brand">YouTube</span>
       </div>
-      <div className="topnav-center">
-        <div className="topnav-search">
-          <input
-            ref={inputRef}
-            type="text"
-            placeholder="Search"
-            className="topnav-search-input"
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            onKeyDown={handleKeyDown}
-          />
-          <button className="topnav-search-btn" onClick={submitSearch}>
-            🔍
-          </button>
-        </div>
+
+      <div className={`topnav-search ${mobileSearchOpen ? 'topnav-search--expanded' : ''}`}>
+        <input
+          ref={inputRef}
+          type="text"
+          placeholder="Search"
+          className="topnav-search-input"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+          onKeyDown={handleKeyDown}
+        />
+        <button className="topnav-search-btn" onClick={submitSearch}>
+          🔍
+        </button>
       </div>
+
       <div className="topnav-right">
-        <button className="topnav-icon-btn">🎤</button>
+        <button
+          className="topnav-icon-btn topnav-mobile-search-toggle"
+          onClick={mobileSearchOpen ? () => setMobileSearchOpen(false) : openMobileSearch}
+        >
+          {mobileSearchOpen ? '✕' : '🔍'}
+        </button>
+        <button className="topnav-icon-btn topnav-mic-btn">🎤</button>
         <button
           className="topnav-icon-btn"
           ref={notifBtnRef}

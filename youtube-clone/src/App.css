@@ -32,3 +32,16 @@
   color: #606060;
   margin: 0;
 }
+
+@media (max-width: 768px) {
+  .content {
+    padding-left: 0;
+    padding-right: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding-top: 56px;
+  }
+}
