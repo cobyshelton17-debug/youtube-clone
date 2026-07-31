@@ -39,10 +39,12 @@
 }
 
 .topnav-search {
-  flex: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
-  max-width: 600px;
+  width: min(600px, 50vw);
   border: 1px solid var(--nav-search-border);
   border-radius: 20px;
   overflow: hidden;
@@ -77,6 +79,7 @@
   align-items: center;
   gap: 8px;
   position: relative;
+  margin-left: auto;
 }
 
 .topnav-icon-btn {
@@ -251,6 +254,10 @@
 
   .topnav-search--expanded {
     display: flex;
+    position: static;
+    transform: none;
+    width: 100%;
+    flex: 1;
     max-width: none;
   }
 

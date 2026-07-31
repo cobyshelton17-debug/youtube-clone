@@ -104,6 +104,12 @@
 
   --card-title: #fff;
   --card-subtext: #aaa;
+
+  @media (max-width: 480px) {
+    --nav-text: #fff;
+    --sidebar-text: #fff;
+    --menu-text: #fff;
+  }
 }
 
 body {
